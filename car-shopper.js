@@ -146,13 +146,13 @@
               margin: 10px 0;
             }
 
-            *::slotted(select-input) {
+            *::slotted(.select-input) {
               margin: 5px 0;
               min-width: 100%;
               grid-column: 1 / -1;
             }
 
-            *::slotted(action-button) {
+            *::slotted(.button-primary) {
               width: 100%;
               margin: 10px 0 0 0;
             }
