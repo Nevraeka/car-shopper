@@ -1,9 +1,9 @@
 (function (document, window) {
 
   if(!window.customElements || !HTMLElement.prototype.attachShadow) {
-    loadScript('https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-sd-ce.js', loadCarShopper)
+    loadScript('https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-sd-ce.js', loadTextInput)
   } else {
-    loadCarShopper();
+    loadTextInput();
   }
   
 
@@ -23,6 +23,10 @@
 
       script.src = url;
       document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+  function loadTextInput() {
+    loadScript('https://rawgit.com/Nevraeka/text-input/master/text-input.js', loadCarShopper)
   }
 
   function loadCarShopper() {
@@ -126,7 +130,7 @@
               min-width: 100%;
             }
 
-            *::slotted(h4) {
+            *::slotted(h3) {
               color: #212121;
               font-weight: 500;
               font-size: 18px;
