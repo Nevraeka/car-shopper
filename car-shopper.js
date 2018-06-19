@@ -74,7 +74,7 @@
     }
     
     function render(component) {
-      if (window.ShadyCSS) ShadyCSS.styleElement(component);
+      if (window.ShadyCSS) { window.ShadyCSS.styleElement(component); }
       if(!!component._root) {
         let $template = document.createElement("template");
         $template.innerHTML = `
@@ -190,7 +190,7 @@
             <slot name="car-shopper-submit"></slot>
           </div>
           `;
-        if (window.ShadyCSS) ShadyCSS.prepareTemplate($template, 'car-shopper');
+        if (window.ShadyCSS) { window.ShadyCSS.prepareTemplate($template, 'car-shopper'); }
         component._root.appendChild(document.importNode($template.content, true));
     
       }
